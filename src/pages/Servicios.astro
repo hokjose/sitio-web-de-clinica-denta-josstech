@@ -1,0 +1,133 @@
+---
+import MainLayout from "../layout/MainLayout.astro";
+
+// Arreglo enriquecido con imágenes, categorías e iconos
+const servicios = [
+  {
+    titulo: "Limpieza Dental Profunda",
+    desc: "Profilaxis integral con ultrasonido, eliminación de placa bacteriana, sarro acumulado y pulido fluorado.",
+    icono: "🪥",
+    categoria: "Cuidado Preventivo",
+    imagen: "imagenes/clinica_josstech.jpg",
+    puntos: ["Prevención de gingivitis", "Pasta fluorada especial"]
+  },
+  {
+    titulo: "Ortodoncia Invisible",
+    desc: "Alineadores transparentes hechos a medida para corregir la posición de tus dientes sin brackets metálicos.",
+    icono: "🦷",
+    categoria: "Alineación & Estética",
+    imagen: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=600&q=80",
+    puntos: ["Escaneo 3D digital", "100% Discreto y cómodo"]
+  },
+  {
+    titulo: "Blanqueamiento LED",
+    desc: "Tratamiento de aclarado dental seguro en una sola sesión, devolviendo el brillo natural sin dañar el esmalte.",
+    icono: "✨",
+    categoria: "Brillo Inmediato",
+    imagen: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=600&q=80",
+    puntos: ["Tecnología de luz fría", "Resultados en 60 min"]
+  },
+  {
+    titulo: "Endodoncia sin Dolor",
+    desc: "Tratamiento de conductos avanzado con instrumentación rotatoria para salvar piezas dentales dañadas.",
+    icono: "🩺",
+    categoria: "Salud Dental",
+    imagen: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600&q=80",
+    puntos: ["Anestesia localizada", "Preservación del diente"]
+    //doctor 🩺
+  },
+  {
+    titulo: "Implantes Dentales",
+    desc: "Rehabilitación fija con pernos de titanio biocompatible y coronas de circonio de aspecto totalmente natural.",
+    icono: "🛡️",
+    categoria: "Rehabilitación",
+    imagen: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=600&q=80",
+    puntos: ["Titanio de grado médico", "Durabilidad garantizada"]
+    //escudo 🛡️_xd
+  },
+  {
+    titulo: "Odontopediatría",
+    desc: "Atención especializada, cercana y divertida adaptada para el cuidado de la salud bucal de los más pequeños.",
+    icono: "👶",
+    categoria: "Atención Infantil",
+    imagen: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80",
+    puntos: ["Ambiente sin estrés", "Educación en cepillado"]
+  },
+];
+---
+
+<MainLayout title="Servicios - Tratamientos Odontológicos">
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    
+    <!-- ENCABEZADO DE LA PÁGINA -->
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <span class="text-xs font-bold uppercase text-sky-600 tracking-widest">
+        • Especialidades Médicas
+      </span>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">
+        Todos Nuestros Tratamientos
+      </h1>
+      <p class="text-slate-500 text-xs sm:text-sm mt-3 leading-relaxed">
+        Ofrecemos soluciones integrales con tecnología de vanguardia y equipamiento de última generación para garantizar la salud, funcionalidad y armonía de tu sonrisa.
+      </p>
+    </div>
+
+    <!-- REJILLA DE TARJETAS DE SERVICIO CON IMAGEN -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {
+        servicios.map((s) => (
+          <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden hover:border-sky-300 hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
+            <div>
+              <!-- Contenedor de la Imagen con Insignia Flotante -->
+              <div class="relative h-48 w-full overflow-hidden bg-slate-100">
+                <img
+                  src={s.imagen}
+                  alt={s.titulo}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <span class="absolute top-3 right-3 bg-white/90 backdrop-blur-md text-sky-800 text-[10px] font-bold px-3 py-1 rounded-full shadow-sm border border-white/50">
+                  {s.categoria}
+                </span>
+              </div>
+
+              <!-- Contenido Textual -->
+              <div class="p-6">
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="text-2xl p-2 bg-sky-50 rounded-xl border border-sky-100">{s.icono}</span>
+                  <h3 class="font-bold text-slate-900 text-base group-hover:text-sky-700 transition-colors">
+                    {s.titulo}
+                  </h3>
+                </div>
+
+                <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                  {s.desc}
+                </p>
+
+                <!-- Puntos Destacados -->
+                <ul class="text-[11px] text-slate-500 space-y-1.5 border-t border-slate-100 pt-3">
+                  {s.puntos.map((punto) => (
+                    <li class="flex items-center gap-2">
+                      ✅ {punto}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <!-- Botón de Acción en la Tarjeta -->
+            <div class="px-6 pb-6 pt-2">
+              <a
+                href="/Contacto"
+                class="w-full bg-slate-50 hover:bg-sky-600 hover:text-white text-slate-700 text-xs font-semibold py-2.5 rounded-xl border border-slate-200 flex items-center justify-center gap-2 transition-all duration-200"
+              >
+                <span>Agendar Consulta</span>
+                <span class="text-sm">→</span>
+              </a>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+  </section>
+</MainLayout>

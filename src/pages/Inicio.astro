@@ -1,0 +1,305 @@
+---
+import MainLayout from "../layout/MainLayout.astro";
+---
+
+<MainLayout title="Inicio - Cuidado Dental de Vanguardia">
+  <!-- SECCIÓN HERO -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <!-- Lado Izquierdo: Textos y Estadísticas -->
+      <div class="space-y-6">
+        <span
+          class="inline-block bg-sky-100 text-sky-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider"
+        >
+          • Odontología Moderna y Cercana
+        </span>
+
+        <h1
+          class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight"
+        >
+          Cuida tu sonrisa con <span
+            class="text-sky-600 underline decoration-sky-300">confianza</span
+          > y total tranquilidad
+        </h1>
+
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+          En la clinica dental <strong class="text-slate-00">josstech_xd</strong
+          > brindamos atención odontológica integral para ti y tu familia con tecnología
+          moderna, trato humano y sin dolor. Tu bienestar es nuestra prioridad médica.
+        </p>
+
+        <!-- Botones de Acción -->
+        <div class="flex flex-wrap items-center gap-4 pt-2">
+          <a
+            href="/Servicios"
+            class="bg-sky-700 hover:bg-sky-800 text-white text-xs font-bold px-5 py-3 rounded-lg flex items-center gap-2 transition-all"
+          >
+            Ver servicios <span>→</span>
+          </a>
+          <!--boton de bordes brilantes de color azul para agendar -->
+          <a
+            href="/Contacto"
+            class="bg-white border border-slate-300 hover:border-sky-500 hover:shadow-md hover:shadow-sky-300/50 text-slate-700 hover:text-sky-700 text-xs font-bold px-5 py-3 rounded-lg flex items-center gap-2 transition-all shadow-sm cursor-pointer select-none"
+          >
+            🗒️ Agendar cita
+          </a>
+        </div>
+
+        <!-- Métrica de Estadísticas -->
+        <div class="grid grid-cols-3 gap-4 pt-6 border-t border-slate-200">
+          <div
+            class="bg-white p-3 rounded-xl border border-slate-400 shadow-sm"
+          >
+            <p class="text-2xl font-extrabold text-sky-700">+10</p>
+            <p class="text-[11px] text-slate-500 font-medium">
+              Años de experiencia médica
+            </p>
+          </div>
+          <div
+            class="bg-white p-3 rounded-xl border border-slate-400 shadow-sm"
+          >
+            <p class="text-2xl font-extrabold text-sky-700">+3.5k</p>
+            <p class="text-[11px] text-slate-500 font-medium">
+              Pacientes satisfechos
+            </p>
+          </div>
+          <div
+            class="bg-white p-3 rounded-xl border border-slate-400 shadow-sm"
+          >
+            <p class="text-2xl font-extrabold text-sky-700">100%</p>
+            <p class="text-[11px] text-slate-500 font-medium">
+              Atención personalizada
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lado Derecho: Imagen Principal con Tarjetas Flotantes -->
+      <div class="relative">
+        <!-- Tarjeta Flotante Superior -->
+        <div
+          class="absolute -top-4 -left-4 bg-white/90 backdrop-blur p-3 rounded-2xl shadow-lg border border-slate-100 z-10 flex items-center gap-3"
+        >
+          <div class="bg-sky-100 text-sky-600 p-2 rounded-xl text-xl">😀</div>
+          <div>
+            <p class="text-[10px] font-bold text-slate-400 uppercase">
+              Filosofía
+            </p>
+            <p class="text-xs font-bold text-slate-800">
+              Cero Dolor con anestesia_xd
+            </p>
+          </div>
+        </div>
+
+        <!-- Imagen de la Clínica / Doctora -->
+        <div
+          class="rounded-3xl overflow-hidden border-4 border-white shadow-xl bg-slate-200"
+        >
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhWgwN8OmCaBrSF1iOw7mGd4Ylw34kDSchb52gCzoAS_j1pXuKjxXqaYpk&s=10"
+            alt="Atención médica odontológica"
+            class="w-full h-[380px] sm:h-[420px] object-cover"
+          />
+        </div>
+
+        <!-- Tarjeta Flotante Inferior 1 -->
+        <div
+          class="absolute bottom-4 left-4 bg-white/95 backdrop-blur p-3 rounded-2xl shadow-lg border border-slate-100 max-w-[240px]"
+        >
+          <div class="flex items-center gap-2">
+            <span class="text-sky-600"> 🏆</span>
+            <div>
+              <p class="text-xs font-bold text-slate-800">
+                Clínica Certificada
+              </p>
+              <p class="text-[10px] text-slate-500">
+                Bioseguridad & Normas Europeas
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta Flotante Inferior 2 -->
+        <div
+          class="absolute -bottom-4 -right-4 bg-white p-3 rounded-2xl shadow-lg border border-slate-100 flex items-center gap-3"
+        >
+          <div class="bg-sky-100 text-sky-600 p-2 rounded-xl text-lg">🤖</div>
+          <div>
+            <p class="text-[10px] font-bold text-slate-400 uppercase">
+              Tecnología 3D
+            </p>
+            <p class="text-xs font-bold text-slate-800">Escáner Intraoral</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN DE SERVICIOS PREVIA CON IMÁGENES -->
+  <section class="bg-white py-12 border-t border-slate-900">
+    <!--border-slate-900 es la linea separadora -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Encabezado de la Sección -->
+      <div
+        class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 gap-4"
+      >
+        <div>
+          <span class="text-xs font-bold uppercase text-sky-600 tracking-wider">
+            Tratamientos Odontológicos
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">
+            Nuestros Servicios Principales
+          </h2>
+          <p class="text-slate-500 text-xs sm:text-sm mt-1 max-w-xl">
+            Ofrecemos soluciones precisas con equipamiento de vanguardia para
+            garantizar la salud bucal, funcionalidad y armonía estética de tu
+            boca.
+          </p>
+          <a
+            href="/Servicios"
+            class="w-fit bg-sky-700 hover:bg-sky-800 text-white text-xs font-bold px-5 py-3 rounded-lg flex items-center gap-2 transition-all"
+          >
+            Ver todos los servicios <span>→</span>
+          </a>
+        </div>
+        <p class="text-xs text-slate-400 font-medium">
+          Planes personalizados y financiación a medida
+        </p>
+      </div>
+
+      <!-- Tarjetas de Servicios con Imágenes -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!--Los elementos se apilarán verticalmente con  div class="grid grid-cols-1 md:grid-cols-3 gap-6"-->
+        <!-- Servicio 1: Limpieza Dental y el cuadro de color griss abajo-->
+        <div
+          class="bg-slate-50 border border-slate-500 rounded-2xl overflow-hidden hover:shadow-lg transition-all group"
+        >
+          <!-- Imagen del Servicio -->
+          <div class="relative h-48 w-full overflow-hidden">
+            <img
+              src="https://cdn.cuponidad.pe/images/Deals/limpiezadestartajefiodent-021.webp"
+              alt="Limpieza dental profunda"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <span
+              class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm text-sky-700 text-[10px] font-bold px-2.5 py-1 rounded-full shadow-sm"
+            >
+              Cuidado Preventivo
+            </span>
+          </div>
+
+          <!-- Contenido de la Tarjeta -->
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xl">🪥</span>
+              <h3 class="font-bold text-slate-800 text-base">
+                Limpieza dental profunda
+              </h3>
+            </div>
+            <p class="text-xs text-slate-900 leading-relaxed mb-4">
+              Profilaxis profunda con ultrasonido. Eliminación de placa
+              bacteriana acumulada, protegiendo tus encías contra la gingivitis.
+            </p>
+            <!--linea separadora -->
+            <ul
+              class="text-[11px] text-slate-500 space-y-1.5 border-t border-slate-500 pt-3"
+            >
+              <li class="flex items-center gap-1.5">
+                ✅ Pulido con pasta fluorada
+              </li>
+              <li class="flex items-center gap-1.5">
+                ✅ Inspección periodontal previa
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Servicio 2: Ortodoncia Invisible -->
+        <div
+          class="bg-slate-50 border border-slate-500 rounded-2xl overflow-hidden hover:shadow-lg transition-all group"
+        >
+          <!-- Imagen del Servicio -->
+          <div class="relative h-48 w-full overflow-hidden">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzBPJeOdtiy2Mny9Qb7hE3bS6yyY4Hxs5uFwedVrz29nI0eR2oGwIUyPU&s=10"
+              alt="Ortodoncia invisible"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <span
+              class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm text-sky-700 text-[10px] font-bold px-2.5 py-1 rounded-full shadow-sm"
+            >
+              Alineación & Estética
+            </span>
+          </div>
+
+          <!-- Contenido de la Tarjeta -->
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xl">🦷</span>
+              <h3 class="font-bold text-slate-800 text-base">Ortodoncia</h3>
+            </div>
+            <p class="text-xs text-slate-900 leading-relaxed mb-4">
+              Alineadores transparentes de última generación. Corrige la
+              posición de tus dientes de forma discreta, rápida y cómoda.
+            </p>
+            <!--linea separadora -->
+            <ul
+              class="text-[11px] text-slate-500 space-y-1.5 border-t border-slate-500 pt-3"
+            >
+              <li class="flex items-center gap-1.5">
+                ✅ Escaneo 3D digital sin moldes
+              </li>
+              <li class="flex items-center gap-1.5">
+                ✅ Planificación previa de resultados
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Servicio 3: Blanqueamiento LED y el cuadro de color griss intenso-->
+        <div
+          class="bg-slate-50 border border-slate-500 rounded-2xl overflow-hidden hover:shadow-lg transition-all group"
+        >
+          <!-- Imagen del Servicio -->
+          <div class="relative h-48 w-full overflow-hidden">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnLAhUObSEJ8_nBBKrWq01WooBf-MZCtpxa9SNuMQ2HKbPfwItjqxf2vgo&s=10"
+              alt="Blanqueamiento LED"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <span
+              class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm text-emerald-700 text-[10px] font-bold px-2.5 py-1 rounded-full shadow-sm"
+            >
+              Brillo Inmediato
+            </span>
+          </div>
+
+          <!-- Contenido de la Tarjeta -->
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xl">✨</span>
+              <h3 class="font-bold text-slate-800 text-base">
+                Blanqueamiento LED
+              </h3>
+            </div>
+            <p class="text-xs text-slate-900 leading-relaxed mb-4">
+              Aclara el tono de tus dientes de manera segura en una sola sesión,
+              devolviendo el brillo natural sin dañar el esmalte.
+            </p>
+            <!--linea separadora -->
+            <ul
+              class="text-[11px] text-slate-500 space-y-1.5 border-t border-slate-200/60 pt-3"
+            >
+              <li class="flex items-center gap-1.5">
+                ✅ Tecnología con luz fría LED
+              </li>
+              <li class="flex items-center gap-1.5">
+                ✅ Protector gingival avanzado
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>

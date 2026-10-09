@@ -1,0 +1,108 @@
+---
+import MainLayout from "../layout/MainLayout.astro";
+
+// Configuración del número de destino (con código de país sin el signo '+')
+// Para Perú agregamos el prefijo 51 antes del número: 519743357754
+const NUMERO_WHATSAPP = "519743357754";
+---
+
+<MainLayout title="Contacto - Agendar Cita">
+  <section class="max-w-4xl mx-auto px-4 py-12">
+    <div class="text-center mb-8">
+      <h1 class="text-3xl font-extrabold text-slate-900">Agenda tu Consulta</h1>
+      <p class="text-slate-500 text-xs sm:text-sm mt-1">
+        Déjanos tus datos y te contactaremos de inmediato.
+      </p>
+    </div>
+
+    <div
+      class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm max-w-lg mx-auto"
+    >
+      <form id="formContactoWhatsApp" class="space-y-4">
+        <!-- NOMBRE COMPLETO -->
+        <div>
+          <label
+            class="block text-xs font-bold text-slate-700 mb-1"
+            for="nombre">Nombre</label
+          >
+          <input
+            type="text"
+            id="nombre"
+            required
+            placeholder="Ej. Juan Pérez"
+            class="w-full border border-slate-300 rounded-lg p-2.5 text-xs outline-none focus:border-sky-500"
+          />
+        </div>
+
+        <!-- TELÉFONO / WHATSAPP -->
+        <div>
+          <label
+            class="block text-xs font-bold text-slate-700 mb-1"
+            for="telefono">Teléfono / WhatsApp</label
+          >
+          <input
+            type="tel"
+            id="telefono"
+            required
+            placeholder="+51 987 654 321"
+            class="w-full border border-slate-300 rounded-lg p-2.5 text-xs outline-none focus:border-sky-500"
+          />
+        </div>
+
+        <!-- SERVICIO DE INTERÉS -->
+        <div>
+          <label
+            class="block text-xs font-bold text-slate-700 mb-1"
+            for="servicio">Servicio de Interés</label
+          >
+          <select
+            id="servicio"
+            required
+            class="w-full border border-slate-300 rounded-lg p-2.5 text-xs text-slate-600 outline-none focus:border-sky-500"
+          >
+            <option value="Limpieza dental">Limpieza dental</option>
+            <option value="Ortodoncia">Ortodoncia</option>
+            <option value="Blanqueamiento">Blanqueamiento</option>
+            <option value="Consulta general">Consulta general</option>
+          </select>
+        </div>
+
+        <!-- BOTÓN DE ENVÍO -->
+        <button
+          type="submit"
+          class="w-full bg-sky-700 hover:bg-sky-800 text-white font-bold text-xs py-3 rounded-lg transition-colors cursor-pointer"
+        >
+          Solicitar Cita Ahora
+        </button>
+      </form>
+    </div>
+  </section>
+</MainLayout>
+
+<!-- SCRIPT QUE CONCATENA Y REDIRIGE A WHATSAPP -->
+<script is:inline define:vars={{ NUMERO_WHATSAPP }}>
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("formContactoWhatsApp");
+
+    form?.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      // 1. Capturar los datos de los inputs
+      const nombre = document.getElementById("nombre").value.trim();
+      const telefono = document.getElementById("telefono").value.trim();
+      const servicio = document.getElementById("servicio").value;
+
+      // 2. Concatenar el mensaje exacto que pediste
+      const mensajeTexto = `hola vi tu pagina web mi nombre es: ${nombre}, mi numero: ${telefono}, quisiera saber del servicio de: ${servicio}`;
+
+      // 3. Convertir el texto a formato seguro URL
+      const mensajeCodificado = encodeURIComponent(mensajeTexto);
+
+      // 4. Crear enlace final y redirigir
+      const urlWhatsApp = `https://wa.me/${NUMERO_WHATSAPP}?text=${mensajeCodificado}`;
+
+      // Abre WhatsApp directamente
+      window.location.href = urlWhatsApp;
+    });
+  });
+</script>
